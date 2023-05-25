@@ -1,17 +1,83 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<style>
 			body, html {
 				margin: auto;
-				max-width: 700px;
+				text-align: center;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translateX(-50%) translateY(-50%);
 				background-attachment: fixed;
+				background-color: #454545;
+				font-family: 'Roboto', sans-serif;
+				font-weight: bold;
+				line-height: 2px;
+			}
+			h1 {
+				font-size: 56px;
+				line-height: 56px;
+				background: linear-gradient(to right, #abf2ff, #7fb2ff);
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+			}
+			p {
+				line-height: 24px;
+				font-size: 22px;
+				background: linear-gradient(to right, #abf2ff, #7fb2ff);
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+			}
+			.button {
+				border-radius: 4px;
 				background-color: #7fb2ff;
-				background-image: linear-gradient(#abf2ff, #7fb2ff);
+				border: none;
+				color: #FFFFFF;
+				text-align: center;
+				text-shadow: 0px 0px 5px #000000;
+				font-size: 22px;
+				padding: 20px;
+				width: 200px;
+				transition: all 0.5s;
+				cursor: pointer;
+				margin: 5px;
+				background-image: linear-gradient(to right, #abf2ff, #7fb2ff);
+				font-weight: bold;
+			}
+			.button span {
+				cursor: pointer;
+				display: inline-block;
+				position: relative;
+				transition: 0.5s;
+			}
+			.button span:after {
+				content: '\00bb';
+				position: absolute;
+				opacity: 0;
+				top: 0;
+				right: -20px;
+				transition: 0.5s;
+			}
+			.button:hover span {
+				padding-right: 25px;
+			}
+			.button:hover span:after {
+				opacity: 1;
+				right: 0;
 			}
 		</style>
 	</head>
 	<body>
-		<h1>Hello World</h1>
+		<p1 align="center"><img src="https://github.com/eltreum0/eltruism/raw/main/Screenshots/logosmall.png" width="10%";><br>
+		<h1>Eltruism</h1>
+		<p>ElvUI Plugin for World of Warcraft</p>
+		<div align="center"><img src="https://github.com/eltreum0/eltruism/raw/main/Screenshots/Preview1.webp" width="800"/></div><br>
+		<button class="button" onclick="window.location.href='https://github.com/eltreum0/eltruism/releases/latest';"  ><span>Download</span></button>
+		<button class="button" onclick="window.location.href='https://discord.gg/rBXNxUY6pk';"  ><span>Discord</span></button>
+		<button class="button" onclick="window.location.href='https://github.com/eltreum0/eltruism/issues/new/choose';"  ><span>Support</span></button>
+		<p1 align="center"><img src="https://github.com/eltreum0/eltruism/raw/main/Screenshots/EltreumHeader.png">
+		<p>© 2023 Eltreum</p>
 	</body>
 </html>
