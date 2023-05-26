@@ -57,6 +57,16 @@
 				opacity: 1;
 				right: 0;
 			}
+			.zoom {
+				padding: 0px;
+				transition: transform .2s; /* Animation */
+				width: 300px;
+				height: auto;
+				margin: 0 auto;
+			}
+			.zoom:hover {
+				transform: scale(2.0); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+			}
 			@keyframes cyclegradient {
 				to {
 					background-position: var(--bg-size) 0;
@@ -66,30 +76,15 @@
 	</head>
 	<body>
 		<h1 align="center"><img src="name.webp" style="max-width:12%;height:auto;display:block;margin-left:auto;margin-right:auto;min-width: 200px;"/></h1>
-		
+
 		<bar align="center"><img src="bar.webp" style="width:1000px;height:2px;max-width:60%;display:block;margin-left:auto;margin-right:auto;">
 		<p align="center">Eltruism is an ElvUI Plugin for World of Warcraft that adds <span style="--bg-size: 200%;--c1: #ff3e02;--c2: #ff7c0a;background: linear-gradient(90deg,var(--c1),var(--c2),var(--c1)) 0 0 / var(--bg-size) 100%;color: transparent;background-clip: text;-webkit-background-clip: text;animation: cyclegradient 5s infinite linear;">gradients</span> to a lot of things</p>
 
 		<p></p>
-		<img src="https://github.com/eltreum0/eltruism/raw/main/Screenshots/Preview1.webp" style="
+		<img class="zoom" src="Preview1.webp" width="300" height="auto" alt="Eltruism Preview Image 1" style="
 		border-radius: 5px;
 		max-width: clamp(10%, 20%, 30%);
 		min-width: 300px;
-		height: auto;
-		display: block;
-		margin-left: auto;
-		margin-right: auto;
-		box-shadow: 0px 0px 5px #7fb2ff;
-		-moz-box-shadow: 0px 0px 5px #7fb2ff;
-		-webkit-box-shadow: 0px 0px 5px #7fb2ff;
-		-khtml-box-shadow: 0px 0px 5px #7fb2ff;
-		">	
-		<p></p>
-		<img src="https://github.com/eltreum0/eltruism/raw/main/Screenshots/Preview2.webp" style="
-		border-radius: 5px;
-		max-width: clamp(10%, 20%, 30%);
-		min-width: 300px;
-		height: auto;
 		display: block;
 		margin-left: auto;
 		margin-right: auto;
@@ -99,11 +94,23 @@
 		-khtml-box-shadow: 0px 0px 5px #7fb2ff;
 		">
 		<p></p>
-		<img src="https://github.com/eltreum0/eltruism/raw/main/Screenshots/Preview3.webp" style="
+		<img class="zoom" src="Preview2.webp" width="300" height="auto" alt="Eltruism Preview Image 2" style="
 		border-radius: 5px;
 		max-width: clamp(10%, 20%, 30%);
 		min-width: 300px;
-		height: auto;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		box-shadow: 0px 0px 5px #7fb2ff;
+		-moz-box-shadow: 0px 0px 5px #7fb2ff;
+		-webkit-box-shadow: 0px 0px 5px #7fb2ff;
+		-khtml-box-shadow: 0px 0px 5px #7fb2ff;
+		">
+		<p></p>
+		<img class="zoom" src="Preview3.webp" width="300" height="auto" alt="Eltruism Preview Image 2" style="
+		border-radius: 5px;
+		max-width: clamp(10%, 20%, 30%);
+		min-width: 300px;
 		display: block;
 		margin-left: auto;
 		margin-right: auto;
@@ -113,11 +120,10 @@
 		-khtml-box-shadow: 0px 0px 5px #7fb2ff;
 		">
 
-		
 		<button class="button" onclick="window.location.href='https://github.com/eltreum0/eltruism/releases/latest';"><span>Download</span></button>
 		<button class="button" onclick="window.location.href='https://discord.gg/rBXNxUY6pk';"><span>Discord</span></button>
 		<button class="button" onclick="window.location.href='https://github.com/eltreum0/eltruism/issues/new/choose';"><span>Support</span></button>
-		
+
 		<bar align="center"><img src="bar.webp" style="width:1000px;height:2px;max-width:60%;display:block;margin-left:auto;margin-right:auto;">
 		<p align="center">© 2023 Eltreum</p>
 	</body>
