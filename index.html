@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="ElvUI Eltruism AddOn for World of Warcraft">
 		<title>Eltruism</title>
 			<link rel="icon" type="image/x-icon" href="favicon.png">
 		<style>
@@ -12,9 +13,10 @@
 				background-color: #18191c;
 				font-family: 'Roboto', sans-serif;
 				font-weight: bold;
+				width: device-width;
 			}
 			p {
-				font-size: clamp(0.5rem, 2vw, 1.2rem);
+				font-size: clamp(1rem, 2vw, 1.2rem);
 				background: linear-gradient(to right, #abf2ff, #7fb2ff);
 				-webkit-background-clip: text;
 				-webkit-text-fill-color: transparent;
@@ -59,13 +61,13 @@
 			}
 			.zoom {
 				padding: 0px;
-				transition: transform .2s; /* Animation */
+				transition: transform .2s;
 				width: 300px;
 				height: auto;
 				margin: 0 auto;
 			}
 			.zoom:hover {
-				transform: scale(2.0); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+				transform: scale(2);
 			}
 			@keyframes cyclegradient {
 				to {
@@ -75,16 +77,17 @@
 		</style>
 	</head>
 	<body>
-		<h1 align="center"><img src="name.webp" style="max-width:12%;height:auto;display:block;margin-left:auto;margin-right:auto;min-width: 200px;"/></h1>
+		<h1 align="center"><img src="name.webp" alt="Eltruism Logo" style="max-width:12%;height:48%auto;display:block;margin-left:auto;margin-right:auto;min-width: 200px;"/></h1>
 
-		<bar align="center"><img src="bar.webp" style="width:1000px;height:2px;max-width:60%;display:block;margin-left:auto;margin-right:auto;">
+		<bar align="center"><img src="bar.webp" alt="Eltruism Bar" style="width:1000px;height:2px;max-width:60%;display:block;margin-left:auto;margin-right:auto;">
 		<p align="center">Eltruism is an ElvUI Plugin for World of Warcraft that adds <span style="--bg-size: 200%;--c1: #ff3e02;--c2: #ff7c0a;background: linear-gradient(90deg,var(--c1),var(--c2),var(--c1)) 0 0 / var(--bg-size) 100%;color: transparent;background-clip: text;-webkit-background-clip: text;animation: cyclegradient 5s infinite linear;">gradients</span> to a lot of things</p>
 
 		<p></p>
 		<img class="zoom" src="Preview1.webp" width="300" height="169" alt="Eltruism Preview Image 1" style="
 		border-radius: 5px;
-		max-width: clamp(10%, 20%, 30%);
-		min-width: 300px;
+		width: clamp(10%, 20%, 100%);
+		max-width: device-width;
+		min-width: 200px;
 		display: block;
 		margin-left: auto;
 		margin-right: auto;
@@ -96,8 +99,9 @@
 		<p></p>
 		<img class="zoom" src="Preview2.webp" width="300" height="169" alt="Eltruism Preview Image 2" style="
 		border-radius: 5px;
-		max-width: clamp(10%, 20%, 30%);
-		min-width: 300px;
+		width: clamp(10%, 20%, 100%);
+		min-width: 200px;
+		max-width: device-width;
 		display: block;
 		margin-left: auto;
 		margin-right: auto;
@@ -109,8 +113,9 @@
 		<p></p>
 		<img class="zoom" src="Preview3.webp" width="300" height="169" alt="Eltruism Preview Image 3" style="
 		border-radius: 5px;
-		max-width: clamp(10%, 20%, 30%);
-		min-width: 300px;
+		width: clamp(10%, 20%, 100%);
+		min-width: 200px;
+		max-width: device-width;
 		display: block;
 		margin-left: auto;
 		margin-right: auto;
@@ -124,7 +129,7 @@
 		<button class="button" onclick="window.location.href='https://discord.gg/rBXNxUY6pk';"><span>Discord</span></button>
 		<button class="button" onclick="window.location.href='https://github.com/eltreum0/eltruism/issues/new/choose';"><span>Support</span></button>
 
-		<bar align="center"><img src="bar.webp" style="width:1000px;height:2px;max-width:60%;display:block;margin-left:auto;margin-right:auto;">
+		<bar align="center"><img src="bar.webp" alt="Eltruism Bar" style="width:1000px;height:2px;max-width:60%;display:block;margin-left:auto;margin-right:auto;">
 		<p align="center">© 2023 Eltreum</p>
 	</body>
 </html>
