@@ -40,20 +40,14 @@
 			.button span {
 				cursor: pointer;
 				display: inline-block;
-				position: relative;
 				transition: 0.5s;
 				font-size: clamp(1rem, 1.5vw, 1.5rem);
 			}
 			.button span:after {
 				content: '\00bb';
-				position: absolute;
 				opacity: 0;
 				top: 0;
-				right: -20px;
 				transition: 0.5s;
-			}
-			.button:hover span {
-				padding-right: 25px;
 			}
 			.button:hover span:after {
 				opacity: 1;
@@ -65,6 +59,7 @@
 				width: 300px;
 				height: auto;
 				margin: 0 auto;
+				cursor: pointer;
 			}
 			.zoom:hover {
 				transform: scale(2);
@@ -125,10 +120,12 @@
 		-khtml-box-shadow: 0px 0px 5px #7fb2ff;
 		">
 
-		<button class="button" onclick="window.location.href='https://github.com/eltreum0/eltruism/releases/latest';"><span>Download</span></button>
 		<button class="button" onclick="window.location.href='https://discord.gg/rBXNxUY6pk';"><span>Discord</span></button>
 		<button class="button" onclick="window.location.href='https://github.com/eltreum0/eltruism/issues/new/choose';"><span>Support</span></button>
-
+		<br>
+		<button class="button" onclick="window.location.href='https://github.com/eltreum0/eltruism/releases/latest';"><span>GitHub</span></button>
+		<button class="button" onclick="window.location.href='https://www.curseforge.com/wow/addons/elvui-eltruism';"><span>Curse</span></button>
+		<button class="button" onclick="window.location.href='https://addons.wago.io/addons/elvui-eltruism';"><span>Wago</span></button>
 		<bar align="center"><img src="bar.webp" alt="Eltruism Bar" width="50%" height="2px" style="max-width:60%;display:block;margin-left:auto;margin-right:auto;">
 		<p align="center">© 2023 Eltreum</p>
 	</body>
