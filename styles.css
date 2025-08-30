@@ -1,11 +1,10 @@
 /* --- Self-Hosted Font Definition --- */
-/* roboto-700 - latin */
 @font-face {
-  font-display: swap; /* Tells the browser how to handle the font loading */
+  font-display: swap;
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 700;
-  src: url('roboto-v30-latin-700.woff2') format('woff2'); /* Modern format */
+  src: url('roboto-v30-latin-700.woff2') format('woff2');
 }
 
 /* --- CSS Variables --- */
@@ -26,7 +25,7 @@ body, html {
 	min-height: 100vh;
 	background-color: var(--bg-color);
 	background-attachment: fixed;
-	font-family: 'Roboto', Arial, sans-serif; /* Fallback to Arial */
+	font-family: 'Roboto', Arial, sans-serif;
 	font-weight: bold;
 	text-align: center;
 }
