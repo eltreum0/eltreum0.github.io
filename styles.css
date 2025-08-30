@@ -1,5 +1,4 @@
 /* --- Self-Hosted Font Definition --- */
-/* This defines the real Roboto font */
 @font-face {
   font-display: swap;
   font-family: 'Roboto';
@@ -11,7 +10,7 @@
 /* This creates the "perfect fallback" font to prevent layout shift */
 @font-face {
   font-family: 'Roboto Fallback';
-  src: local('Arial'); /* Use a common local font */
+  src: local('Arial');
   size-adjust: 97.8%;
   ascent-override: 92.5%;
   descent-override: 24.5%;
@@ -65,7 +64,7 @@ p {
 	-webkit-background-clip: text;
 	background-clip: text;
 	color: transparent;
-	margin: 1vh 0;
+	margin: 1rem 0; /* Replaced vh with stable rem unit */
 }
 .logo {
 	display: block;
@@ -78,9 +77,7 @@ p {
 	border: none;
 	height: 2px;
 	width: 80%;
-	margin: 2vh auto;
-	background-image: url('bar.webp');
-	background-size: 100% 100%;
+	margin: 2rem auto; /* Replaced vh with stable rem unit */
 }
 
 /* --- Animations --- */
@@ -104,7 +101,7 @@ p {
 	flex-direction: column;
 	align-items: center;
 	gap: 1.5rem;
-	margin: 2vh 0;
+	margin: 2rem 0; /* Replaced vh with stable rem unit */
 }
 .preview-gallery a {
 	position: relative;
@@ -127,7 +124,7 @@ p {
 
 /* --- Buttons --- */
 .button-group {
-	margin: 2vh 0;
+	margin: 2rem 0; /* Replaced vh with stable rem unit */
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
