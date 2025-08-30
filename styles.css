@@ -8,6 +8,16 @@
 	--anim-grad-c2: #ff7c0a;
 }
 
+/* Create a fallback font that perfectly matches Roboto's dimensions */
+@font-face {
+	font-family: 'Roboto Fallback';
+	src: local('Arial');
+	size-adjust: 97.8%;
+	ascent-override: 92.5%;
+	descent-override: 24.5%;
+	line-gap-override: 0%;
+}
+
 /* the gradient on the text */
 .animated-gradient-text {
 	--bg-size: 200%;
@@ -104,12 +114,4 @@
 	.preview-gallery a:hover {
 		transform: scale(1.1);
 	}
-}
-
-.logo {
-	display: block;
-	max-width: clamp(288px, 19.2vw, 352px);
-	height: auto;
-	aspect-ratio: 512 / 128;
-	margin: 0 auto;
 }
