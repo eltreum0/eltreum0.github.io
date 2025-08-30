@@ -1,132 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="description" content="ElvUI Eltruism AddOn for World of Warcraft">
 		<title>Eltruism</title>
-			<link rel="icon" type="image/x-icon" href="favicon.png">
-		<style>
-			body, html {
-				margin: auto;
-				text-align: center;
-				background-attachment: fixed;
-				background-color: #18191c;
-				font-family: 'Roboto', sans-serif;
-				font-weight: bold;
-				width: device-width;
-			}
-			p {
-				font-size: clamp(1rem, 2vw, 1.2rem);
-				background: linear-gradient(to right, #abf2ff, #7fb2ff);
-				-webkit-background-clip: text;
-				-webkit-text-fill-color: transparent;
-			}
-			.button {
-				border-radius: 4px;
-				background-color: #7fb2ff;
-				border: none;
-				color: #FFFFFF;
-				text-align: center;
-				text-shadow: 0px 0px 5px #000000;
-				font-size: clamp(1rem, 1.5vw, 1.5rem);
-				padding:0.35em 1.2em;
-				width: 0.35em 1.2em;
-				transition: all 0.5s;
-				cursor: pointer;
-				margin: 5px;
-				background-image: linear-gradient(to right, #abf2ff, #7fb2ff);
-				font-weight: bold;
-			}
-			.button span {
-				cursor: pointer;
-				display: inline-block;
-				transition: 0.5s;
-				font-size: clamp(1rem, 1.5vw, 1.5rem);
-			}
-			.button span:after {
-				content: '\00bb';
-				opacity: 0;
-				top: 0;
-				transition: 0.5s;
-			}
-			.button:hover span:after {
-				opacity: 1;
-				right: 0;
-			}
-			.zoom {
-				padding: 0px;
-				transition: transform .2s;
-				width: 300px;
-				height: auto;
-				margin: 0 auto;
-				cursor: pointer;
-			}
-			.zoom:hover {
-				transform: scale(2);
-			}
-			@keyframes cyclegradient {
-				to {
-					background-position: var(--bg-size) 0;
-				}
-			}
-		</style>
+		<link rel="stylesheet" href="styles.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+		<link rel="icon" type="image/x-icon" href="favicon.png">
 	</head>
+
 	<body>
-		<h1 align="center"><img src="name.webp" width="12%" height="48%" alt="Eltruism Logo" style="max-width:12%;height:48%auto;display:block;margin-left:auto;margin-right:auto;min-width: 200px;"/></h1>
+		<main class="container">
+			<header>
+				<h1>
+					<img src="name.webp" alt="Eltruism Logo" class="logo">
+				</h1>
+				<hr class="separator">
+				<p>
+					Eltruism is an ElvUI Plugin for World of Warcraft that adds
+					<span class="animated-gradient-text">gradients</span> to a lot of things.
+				</p>
+			</header>
 
-		<bar align="center"><img src="bar.webp" alt="Eltruism Bar" width="50%" height="2px" style="max-width:60%;display:block;margin-left:auto;margin-right:auto;">
-		<p align="center">Eltruism is an ElvUI Plugin for World of Warcraft that adds <span style="--bg-size: 200%;--c1: #ff3e02;--c2: #ff7c0a;background: linear-gradient(90deg,var(--c1),var(--c2),var(--c1)) 0 0 / var(--bg-size) 100%;color: transparent;background-clip: text;-webkit-background-clip: text;animation: cyclegradient 5s infinite linear;">gradients</span> to a lot of things</p>
+			<section class="preview-gallery">
+				<a href="Preview1Full.webp" target="_blank" class="preview-link">
+					<img class="preview-image" src="Preview1.webp" alt="Eltruism Preview Image 1" width="300" height="169" loading="lazy">
+				</a>
+				<a href="Preview2Full.webp" target="_blank" class="preview-link">
+					<img class="preview-image" src="Preview2.webp" alt="Eltruism Preview Image 2" width="300" height="169" loading="lazy">
+				</a>
+				<a href="Preview3Full.webp" target="_blank" class="preview-link">
+					<img class="preview-image" src="Preview3.webp" alt="Eltruism Preview Image 3" width="300" height="169" loading="lazy">
+				</a>
+			</section>
 
-		<p></p>
-		<img class="zoom" src="Preview1.webp" onclick="window.location.href='Preview1Full.webp';" width="300" height="169" alt="Eltruism Preview Image 1" style="
-		border-radius: 5px;
-		width: clamp(10%, 20%, 100%);
-		max-width: device-width;
-		min-width: 200px;
-		display: block;
-		margin-left: auto;
-		margin-right: auto;
-		box-shadow: 0px 0px 5px #7fb2ff;
-		-moz-box-shadow: 0px 0px 5px #7fb2ff;
-		-webkit-box-shadow: 0px 0px 5px #7fb2ff;
-		-khtml-box-shadow: 0px 0px 5px #7fb2ff;
-		">
-		<p></p>
-		<img class="zoom" src="Preview2.webp" onclick="window.location.href='Preview2Full.webp';" width="300" height="169" alt="Eltruism Preview Image 2" style="
-		border-radius: 5px;
-		width: clamp(10%, 20%, 100%);
-		min-width: 200px;
-		max-width: device-width;
-		display: block;
-		margin-left: auto;
-		margin-right: auto;
-		box-shadow: 0px 0px 5px #7fb2ff;
-		-moz-box-shadow: 0px 0px 5px #7fb2ff;
-		-webkit-box-shadow: 0px 0px 5px #7fb2ff;
-		-khtml-box-shadow: 0px 0px 5px #7fb2ff;
-		">
-		<p></p>
-		<img class="zoom" src="Preview3.webp" onclick="window.location.href='Preview3Full.webp';" width="300" height="169" alt="Eltruism Preview Image 3" style="
-		border-radius: 5px;
-		width: clamp(10%, 20%, 100%);
-		min-width: 200px;
-		max-width: device-width;
-		display: block;
-		margin-left: auto;
-		margin-right: auto;
-		box-shadow: 0px 0px 5px #7fb2ff;
-		-moz-box-shadow: 0px 0px 5px #7fb2ff;
-		-webkit-box-shadow: 0px 0px 5px #7fb2ff;
-		-khtml-box-shadow: 0px 0px 5px #7fb2ff;
-		">
+			<nav class="button-group">
+				<a class="button" href="https://discord.gg/rBXNxUY6pk" target="_blank" rel="noopener noreferrer"><span>Discord</span></a>
+				<a class="button" href="https://www.patreon.com/eltreum" target="_blank" rel="noopener noreferrer"><span>Patreon</span></a>
+				<a class="button" href="https://github.com/eltreum0/eltruism/releases/latest" target="_blank" rel="noopener noreferrer"><span>GitHub</span></a>
+				<a class="button" href="https://www.curseforge.com/wow/addons/elvui-eltruism" target="_blank" rel="noopener noreferrer"><span>Curse</span></a>
+				<a class="button" href="https://addons.wago.io/addons/elvui-eltruism" target="_blank" rel="noopener noreferrer"><span>Wago</span></a>
+			</nav>
 
-		<button class="button" onclick="window.location.href='https://discord.gg/rBXNxUY6pk';"><span>Discord</span></button>
-		<button class="button" onclick="window.location.href='https://www.patreon.com/eltreum';"><span>Patreon</span></button>
-		<br>
-		<button class="button" onclick="window.location.href='https://github.com/eltreum0/eltruism/releases/latest';"><span>GitHub</span></button>
-		<button class="button" onclick="window.location.href='https://www.curseforge.com/wow/addons/elvui-eltruism';"><span>Curse</span></button>
-		<button class="button" onclick="window.location.href='https://addons.wago.io/addons/elvui-eltruism';"><span>Wago</span></button>
-		<bar align="center"><img src="bar.webp" alt="Eltruism Bar" width="50%" height="2px" style="max-width:60%;display:block;margin-left:auto;margin-right:auto;">
-		<p align="center">© 2025 Eltreum</p>
+			<footer>
+				<hr class="separator">
+				<p>© 2025 Eltreum</p>
+			</footer>
+		</main>
 	</body>
 </html>
