@@ -105,3 +105,11 @@
 		transform: scale(1.1);
 	}
 }
+
+.logo {
+	display: block;
+	max-width: clamp(288px, 19.2vw, 352px);
+	height: auto;
+	aspect-ratio: 800 / 200;
+	margin: 0 auto;
+}
