@@ -1,10 +1,21 @@
 /* --- Self-Hosted Font Definition --- */
+/* This defines the real Roboto font */
 @font-face {
   font-display: swap;
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 700;
   src: url('roboto-v48-latin-700.woff2') format('woff2');
+}
+
+/* This creates the "perfect fallback" font to prevent layout shift */
+@font-face {
+  font-family: 'Roboto Fallback';
+  src: local('Arial'); /* Use a common local font */
+  size-adjust: 97.8%;
+  ascent-override: 92.5%;
+  descent-override: 24.5%;
+  line-gap-override: 0%;
 }
 
 /* --- CSS Variables --- */
@@ -25,7 +36,8 @@ body, html {
 	min-height: 100vh;
 	background-color: var(--bg-color);
 	background-attachment: fixed;
-	font-family: 'Roboto', Arial, sans-serif;
+	/* Use the fallback font first, then the real one */
+	font-family: 'Roboto', 'Roboto Fallback', Arial, sans-serif;
 	font-weight: bold;
 	text-align: center;
 }
