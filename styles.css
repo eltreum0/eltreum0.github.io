@@ -81,7 +81,7 @@ p {
 	border: none;
 	height: 2px;
 	width: 80%;
-	margin: 2rem auto;
+	margin: 2rem auto; /* Replaced vh with stable rem unit */
 }
 
 /* --- Animations --- */
@@ -105,20 +105,18 @@ p {
 	flex-direction: column;
 	align-items: center;
 	gap: 1.5rem;
-	margin: 2rem 0;
+	margin: 2rem 0; /* Replaced vh with stable rem unit */
 }
 .preview-gallery a {
 	position: relative;
 	z-index: 1;
 	display: block;
 	transition: transform 0.2s ease-in-out;
-	aspect-ratio: 16 / 9; /* Defines the shape of the link container */
 }
 .preview-image {
 	display: block;
 	width: 100%;
-	height: 100%; /* Make image fill the container */
-    object-fit: cover; /* Ensure image covers the area without distortion */
+	height: auto;
 	border-radius: 5px;
 	box-shadow: 0 0 5px var(--shadow-color);
 	cursor: pointer;
@@ -130,7 +128,7 @@ p {
 
 /* --- Buttons --- */
 .button-group {
-	margin: 2rem 0;
+	margin: 2rem 0; /* Replaced vh with stable rem unit */
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
