@@ -1,4 +1,14 @@
-/* --- CSS Variables and Global Styles --- */
+/* --- Self-Hosted Font Definition --- */
+/* roboto-700 - latin */
+@font-face {
+  font-display: swap; /* Tells the browser how to handle the font loading */
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  src: url('roboto-v30-latin-700.woff2') format('woff2'); /* Modern format */
+}
+
+/* --- CSS Variables --- */
 :root {
 	--bg-color: #18191c;
 	--primary-gradient: linear-gradient(to right, #abf2ff, #7fb2ff);
@@ -8,17 +18,61 @@
 	--anim-grad-c2: #ff7c0a;
 }
 
-/* Create a fallback font that perfectly matches Roboto's dimensions */
-@font-face {
-  font-family: 'Roboto Fallback';
-  src: local('Arial');
-  size-adjust: 97.8%;
-  ascent-override: 92.5%;
-  descent-override: 24.5%;
-  line-gap-override: 0%;
+/* --- Base Layout --- */
+body, html {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	min-height: 100vh;
+	background-color: var(--bg-color);
+	background-attachment: fixed;
+	font-family: 'Roboto', Arial, sans-serif; /* Fallback to Arial */
+	font-weight: bold;
+	text-align: center;
+}
+body {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+header, footer {
+	width: 100%;
+}
+.container {
+	max-width: 1200px;
+	width: 95%;
+	padding: 1rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
-/* --- Non-Critical Animations and Hovers --- */
+/* --- Page Elements --- */
+p {
+	font-size: clamp(1rem, 2vw, 1.2rem);
+	background: var(--primary-gradient);
+	-webkit-background-clip: text;
+	background-clip: text;
+	color: transparent;
+	margin: 1vh 0;
+}
+.logo {
+	display: block;
+	max-width: clamp(288px, 19.2vw, 352px);
+	height: auto;
+	aspect-ratio: 512 / 128;
+	margin: 0 auto;
+}
+.separator {
+	border: none;
+	height: 2px;
+	width: 80%;
+	margin: 2vh auto;
+	background-image: url('bar.webp');
+	background-size: 100% 100%;
+}
+
+/* --- Animations --- */
 .animated-gradient-text {
 	--bg-size: 200%;
 	background: linear-gradient(90deg, var(--anim-grad-c1), var(--anim-grad-c2), var(--anim-grad-c1)) 0 0 / var(--bg-size) 100%;
@@ -33,11 +87,43 @@
 	}
 }
 
+/* --- Image Gallery --- */
+.preview-gallery {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 1.5rem;
+	margin: 2vh 0;
+}
+.preview-gallery a {
+	position: relative;
+	z-index: 1;
+	display: block;
+	transition: transform 0.2s ease-in-out;
+}
+.preview-image {
+	display: block;
+	width: 100%;
+	height: auto;
+	border-radius: 5px;
+	box-shadow: 0 0 5px var(--shadow-color);
+	cursor: pointer;
+}
 .preview-gallery a:hover {
 	z-index: 10;
 	transform: scale(1.5);
 }
 
+/* --- Buttons --- */
+.button-group {
+	margin: 2vh 0;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 10px;
+	position: relative;
+	z-index: 5;
+}
 .button {
 	display: inline-block;
 	padding: 0.5em 1.2em;
@@ -54,14 +140,19 @@
 	position: relative;
 	overflow: hidden;
 }
-
 .button span { display: inline-block; position: relative; transition: transform 0.3s; }
 .button:hover span { transform: translateX(-10px); }
 .button::after { content: '\00bb'; position: absolute; opacity: 0; top: 50%; right: -20px; transform: translateY(-50%); transition: 0.3s; }
 .button:hover::after { opacity: 1; right: 15px; }
 
-/* --- Responsive Zoom Overrides --- */
+/* --- Responsive Layout --- */
 @media (min-aspect-ratio: 4/3) {
+	.preview-gallery {
+		flex-direction: row;
+	}
+	.preview-gallery a {
+		width: clamp(180px, 18vw, 280px);
+	}
 	.preview-gallery a:hover {
 		transform: scale(1.7);
 	}
