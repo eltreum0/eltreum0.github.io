@@ -1,56 +1,714 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta name="description" content="ElvUI Eltruism AddOn for World of Warcraft">
-		<title>Eltruism</title>
 
-		<link rel="preload" as="font" type="font/woff2" href="roboto-v48-latin-700.woff2" crossorigin>
-		<link rel="preload" as="style" href="styles.css">
-		<link rel="preload" as="image" href="name.webp">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Eltruism — Premium ElvUI Plugin &amp; Profiles for World of Warcraft</title>
+	<meta name="description"
+		content="Eltruism is an ElvUI plugin for World of Warcraft featuring handcrafted DPS/Tank &amp; Healer profiles, signature gradients, custom glows, dynamic nameplates, TTS cooldowns, and addon integrations.">
+	<meta name="keywords"
+		content="ElvUI, Eltruism, Eltreum, World of Warcraft, WoW AddOn, WoW UI, Healer Profile, DPS Profile, Nameplates, Gradients, Tukui, CurseForge, Wago">
+	<meta name="author" content="Eltreum">
+	<link rel="canonical" href="https://eltruism.com/">
 
-		<link rel="stylesheet" href="styles.css">
-		<link rel="icon" type="image/x-icon" href="favicon.png">
-	</head>
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://eltruism.com/">
+	<meta property="og:title" content="Eltruism — Premium ElvUI Plugin &amp; Profiles for World of Warcraft">
+	<meta property="og:description"
+		content="Handcrafted DPS/Tank &amp; Healer profiles, signature gradients, custom glows, dynamic nameplates, TTS cooldowns, and deep addon integrations.">
+	<meta property="og:image" content="https://eltruism.com/PagePreview1.webp">
+	<meta property="og:image:width" content="640">
+	<meta property="og:image:height" content="360">
 
-	<body>
-		<main class="container">
-			<header>
-				<h1>
-					<img src="name.webp" alt="Eltruism Logo" class="logo" width="512" height="128">
-				</h1>
-				<hr class="separator">
-				<p>
-					<span>Eltruism is an ElvUI Plugin for World of Warcraft that adds <span class="animated-gradient-text">gradients</span> to a lot of things.</span>
-				</p>
-			</header>
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:url" content="https://eltruism.com/">
+	<meta name="twitter:title" content="Eltruism — Premium ElvUI Plugin &amp; Profiles">
+	<meta name="twitter:description"
+		content="Handcrafted DPS/Tank &amp; Healer profiles, signature gradients, custom glows, dynamic nameplates, and deep addon integrations.">
+	<meta name="twitter:image" content="https://eltruism.com/PagePreview1.webp">
 
-			<section class="preview-gallery">
-				<a href="Preview1Full.webp" target="_blank" class="preview-link">
-					<img class="preview-image" src="PagePreview1.webp" alt="Eltruism Preview Image 1" width="300" height="169" loading="lazy">
+	<meta name="theme-color" content="#101114">
+	<link rel="icon" type="image/png" href="favicon.png">
+
+	<link rel="preload" as="font" type="font/woff2" href="roboto-v48-latin-700.woff2" crossorigin>
+	<link rel="preload" as="style" href="styles.css">
+	<link rel="preload" as="image" href="logohq.webp">
+
+	<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+	<div class="bg-glow bg-glow-1" aria-hidden="true"></div>
+	<div class="bg-glow bg-glow-2" aria-hidden="true"></div>
+
+	<nav class="site-nav" aria-label="Main Navigation">
+		<div class="nav-inner">
+			<a href="#" class="nav-brand" aria-label="Eltruism Home">
+				<img src="logo.webp" alt="Eltruism Crest" class="nav-logo" width="32" height="32">
+				<span class="nav-brand-text">ELTRUISM</span>
+			</a>
+			<ul class="nav-links">
+				<li><a href="#previews">Showcase</a></li>
+				<li><a href="#features">Features</a></li>
+				<li><a href="#addons">Addons</a></li>
+				<li><a href="#install">Install</a></li>
+			</ul>
+			<div class="nav-actions">
+				<a href="https://discord.gg/rBXNxUY6pk" target="_blank" rel="noopener noreferrer"
+					class="nav-btn nav-btn-discord" aria-label="Join Discord">
+					<svg class="icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="currentColor">
+						<path
+							d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994.021-.041.001-.09-.041-.106a13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.929 1.793 8.18 1.793 12.061 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.893.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.028zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z" />
+					</svg>
+					<span>Discord</span>
 				</a>
-				<a href="Preview2Full.webp" target="_blank" class="preview-link">
-					<img class="preview-image" src="PagePreview2.webp" alt="Eltruism Preview Image 2" width="300" height="169" loading="lazy">
+				<a href="#install" class="nav-btn nav-btn-primary">
+					<span>Get Eltruism</span>
 				</a>
-				<a href="Preview3Full.webp" target="_blank" class="preview-link">
-					<img class="preview-image" src="PagePreview3.webp" alt="Eltruism Preview Image 3" width="300" height="169" loading="lazy">
+			</div>
+		</div>
+	</nav>
+
+	<main class="page-container">
+
+		<header class="hero-section">
+			<div class="hero-badge">
+				<span class="badge-dot"></span>
+				<span>ElvUI Plugin &amp; Complete Interface Suite</span>
+			</div>
+
+			<div class="hero-logo-wrap">
+				<img src="logohq.webp" alt="Eltruism Logo" class="hero-logo" width="512" height="128"
+					fetchpriority="high">
+			</div>
+
+			<hr class="separator" aria-hidden="true">
+
+			<h1 class="hero-tagline">
+				An ElvUI Plugin that adds <span class="animated-gradient-text">gradients</span>, tailored profiles, and
+				deep customization to World of Warcraft.
+			</h1>
+
+			<p class="hero-subtext">
+				Tested and optimized for 16:9 displays across 1080p, 1440p, 4K, and Ultrawide. Featuring dedicated DPS,
+				Tank, and Healer profiles, combat voice alerts, custom glows, dynamic nameplates, and 1-click addon
+				setups.
+			</p>
+
+			<div class="hero-pills" role="list">
+				<div class="pill" role="listitem">
+					<span class="pill-icon">⚡</span>
+					<span>Requires ElvUI</span>
+				</div>
+				<div class="pill" role="listitem">
+					<span class="pill-icon">⚔️</span>
+					<span>DPS / Tank &amp; Healer Profiles</span>
+				</div>
+				<div class="pill" role="listitem">
+					<span class="pill-icon">🎮</span>
+					<span>Retail, Classic, MoP &amp; Forever</span>
+				</div>
+				<div class="pill" role="listitem">
+					<span class="pill-icon">⚙️</span>
+					<span>100% Modular &amp; Customizable</span>
+				</div>
+			</div>
+
+			<div class="hero-cta-group">
+				<a class="button button-primary" href="https://www.curseforge.com/wow/addons/elvui-eltruism"
+					target="_blank" rel="noopener noreferrer">
+					<svg class="btn-icon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"
+						fill="currentColor">
+						<path
+							d="M18.326 9.2145S23.2261 8.4418 24 6.1882h-7.5066V4.4H0l2.0318 2.3576V9.173s5.1267-.2665 7.1098 1.2372c2.7146 2.516-3.053 5.917-3.053 5.917L5.0995 19.6c1.5465-1.4726 4.494-3.3775 9.8983-3.2857-2.0565.65-4.1245 1.6651-5.7344 3.2857h10.9248l-1.0288-3.2726s-7.918-4.6688-.8336-7.1127z" />
+					</svg>
+					<span>CurseForge</span>
 				</a>
-			</section>
 
-			<nav class="button-group">
-				<a class="button" href="https://discord.gg/rBXNxUY6pk" target="_blank" rel="noopener noreferrer"><span>Discord</span></a>
-				<a class="button" href="https://www.patreon.com/eltreum" target="_blank" rel="noopener noreferrer"><span>Patreon</span></a>
-				<a class="button" href="https://github.com/eltreum0/eltruism/releases/latest" target="_blank" rel="noopener noreferrer"><span>GitHub</span></a>
-				<a class="button" href="https://www.curseforge.com/wow/addons/elvui-eltruism" target="_blank" rel="noopener noreferrer"><span>Curse</span></a>
-				<a class="button" href="https://addons.wago.io/addons/elvui-eltruism" target="_blank" rel="noopener noreferrer"><span>Wago</span></a>
-				<a class="button" href="https://www.youtube.com/results?search_query=eltruism" target="_blank" rel="noopener noreferrer"><span>Youtube</span></a>
-			</nav>
+				<a class="button button-primary" href="https://addons.wago.io/addons/elvui-eltruism" target="_blank"
+					rel="noopener noreferrer">
+					<svg class="btn-icon" viewBox="0 0 175 97" width="22" height="13" aria-hidden="true">
+						<path fill="#c1272d"
+							d="M 128,44 L 148,44 A 20,20 0 0,0 128,24 L 128,0 A 44,44 0 0,1 172,44 Z" />
+						<path fill="currentColor"
+							d="M 120,44 L 120,24 A 20,20 0 0,0 100,44 L 76,44 A 44,44 0 0,1 120,0 Z" />
+						<path fill="currentColor"
+							d="M 128,52 L 128,76 A 20,20 0 0,0 148,52 L 172,52 A 44,44 0 0,1 128,96 Z" />
+						<path fill="currentColor"
+							d="M 120,52 L 120,76 A 20,20 0 0,1 100,52 L 76,52 A 44,44 0 0,0 44,96 A 44,44 0 0,0 0,52 L 24,52 A 20,20 0 0,1 44,72 A 20,20 0 0,1 64,52 Z" />
+					</svg>
+					<span>Wago.io</span>
+				</a>
 
-			<footer>
-				<hr class="separator">
-				<p>© 2026 Eltreum</p>
-			</footer>
-		</main>
-	</body>
+				<a class="button button-secondary" href="https://github.com/eltreum0/eltruism/releases/latest"
+					target="_blank" rel="noopener noreferrer">
+					<svg class="btn-icon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"
+						fill="currentColor">
+						<path
+							d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z" />
+					</svg>
+					<span>GitHub Releases</span>
+				</a>
+
+				<a class="button button-secondary" href="https://discord.gg/rBXNxUY6pk" target="_blank"
+					rel="noopener noreferrer">
+					<svg class="btn-icon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"
+						fill="currentColor">
+						<path
+							d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994.021-.041.001-.09-.041-.106a13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.929 1.793 8.18 1.793 12.061 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.893.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.028zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z" />
+					</svg>
+					<span>Discord</span>
+				</a>
+
+				<a class="button button-outline" href="https://www.patreon.com/eltreum" target="_blank"
+					rel="noopener noreferrer">
+					<svg class="btn-icon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"
+						fill="currentColor">
+						<path
+							d="M15.386.5C10.63.5 6.756 4.374 6.756 9.13c0 4.707 3.874 8.532 8.63 8.532 4.707 0 8.581-3.825 8.581-8.532C23.967 4.374 20.093.5 15.386.5zM.033 23.5h4.205V.5H.033v23z" />
+					</svg>
+					<span>Patreon</span>
+				</a>
+
+				<a class="button button-outline" href="https://www.youtube.com/results?search_query=eltruism"
+					target="_blank" rel="noopener noreferrer">
+					<svg class="btn-icon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"
+						fill="currentColor">
+						<path
+							d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+					</svg>
+					<span>YouTube</span>
+				</a>
+			</div>
+		</header>
+
+
+		<section id="previews" class="section-block">
+			<div class="section-header">
+				<h2 class="section-title">Interface Showcase</h2>
+				<p class="section-subtitle">Click any image to view full 4K in-game screenshots and layout details.</p>
+			</div>
+
+			<div class="gallery-grid">
+
+				<div class="gallery-card">
+					<a href="#preview1" class="gallery-thumb-link" aria-label="Expand Preview 1: DPS and Tank Profile">
+						<img class="gallery-thumb" src="PagePreview1.webp" alt="Eltruism DPS and Tank Profile Preview"
+							width="640" height="360" loading="lazy">
+						<div class="gallery-overlay">
+							<span class="gallery-zoom-badge">🔍 Click to inspect (4K)</span>
+						</div>
+					</a>
+					<div class="gallery-meta">
+						<div class="gallery-tag">Core Layout</div>
+						<h3 class="gallery-heading">DPS &amp; Tank Profile</h3>
+						<p class="gallery-desc">Streamlined combat layout with centered actionbars, dynamic resource
+							trackers, Details! skinning, and non-intrusive raid anchors.</p>
+					</div>
+				</div>
+
+
+				<div class="gallery-card">
+					<a href="#preview2" class="gallery-thumb-link"
+						aria-label="Expand Preview 2: Healer Profile and Raid Frames">
+						<img class="gallery-thumb" src="PagePreview2.webp" alt="Eltruism Healer Profile Preview"
+							width="640" height="360" loading="lazy">
+						<div class="gallery-overlay">
+							<span class="gallery-zoom-badge">🔍 Click to inspect (4K)</span>
+						</div>
+					</a>
+					<div class="gallery-meta">
+						<div class="gallery-tag">Specialized Profile</div>
+						<h3 class="gallery-heading">Healer Profile</h3>
+						<p class="gallery-desc">Optimized central raid frames with gradient health bars, debuff
+							prioritization, out-of-range fading, and dedicated mana monitors.</p>
+					</div>
+				</div>
+
+
+				<div class="gallery-card">
+					<a href="#preview3" class="gallery-thumb-link"
+						aria-label="Expand Preview 3: Dark and Light Modes and UI Skins">
+						<img class="gallery-thumb" src="PagePreview3.webp" alt="Eltruism Skins and Themes Preview"
+							width="640" height="360" loading="lazy">
+						<div class="gallery-overlay">
+							<span class="gallery-zoom-badge">🔍 Click to inspect (4K)</span>
+						</div>
+					</a>
+					<div class="gallery-meta">
+						<div class="gallery-tag">Themes &amp; Skins</div>
+						<h3 class="gallery-heading">Dark &amp; Light Skins</h3>
+						<p class="gallery-desc">Modern sleek shadows, character panel enhancements, quest dialogue
+							restyling, transparent unitframe health, and bespoke borders.</p>
+					</div>
+				</div>
+
+
+				<div class="gallery-card">
+					<a href="#preview4" class="gallery-thumb-link"
+						aria-label="Expand Preview 4: Dynamic Nameplates and Castbars">
+						<img class="gallery-thumb" src="PagePreview4.webp"
+							alt="Eltruism Nameplates and Castbars Preview" width="640" height="360" loading="lazy">
+						<div class="gallery-overlay">
+							<span class="gallery-zoom-badge">🔍 Click to inspect (4K)</span>
+						</div>
+					</a>
+					<div class="gallery-meta">
+						<div class="gallery-tag">Combat Fidelity</div>
+						<h3 class="gallery-heading">Nameplates &amp; Castbars</h3>
+						<p class="gallery-desc">Gradient nameplates with dynamic height, threat-colored borders,
+							integrated power bars, aura glows, and unified player/target castbars.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<div id="preview1" class="lightbox-modal" role="dialog" aria-modal="true"
+			aria-label="Preview 1: DPS &amp; Tank Profile">
+			<a href="#!" class="lightbox-backdrop" aria-label="Close modal"></a>
+			<div class="lightbox-dialog">
+				<div class="lightbox-topbar">
+					<span class="lightbox-title">DPS &amp; Tank Profile — 4K Screenshot</span>
+					<div class="lightbox-controls">
+						<a href="Preview1Full.webp" target="_blank" rel="noopener noreferrer" class="lightbox-external"
+							aria-label="Open original image">Open Full Image ↗</a>
+						<a href="#!" class="lightbox-close" aria-label="Close modal">&times;</a>
+					</div>
+				</div>
+				<div class="lightbox-media">
+					<img src="Preview1Full.webp" alt="Eltruism DPS and Tank Profile in full resolution" loading="lazy">
+				</div>
+				<div class="lightbox-nav">
+					<a href="#preview4" class="lightbox-arrow" aria-label="Previous image">&larr; Previous</a>
+					<span class="lightbox-counter">1 / 4</span>
+					<a href="#preview2" class="lightbox-arrow" aria-label="Next image">Next &rarr;</a>
+				</div>
+			</div>
+		</div>
+
+		<div id="preview2" class="lightbox-modal" role="dialog" aria-modal="true"
+			aria-label="Preview 2: Healer Profile">
+			<a href="#!" class="lightbox-backdrop" aria-label="Close modal"></a>
+			<div class="lightbox-dialog">
+				<div class="lightbox-topbar">
+					<span class="lightbox-title">Healer Profile — 4K Screenshot</span>
+					<div class="lightbox-controls">
+						<a href="Preview2Full.webp" target="_blank" rel="noopener noreferrer" class="lightbox-external"
+							aria-label="Open original image">Open Full Image ↗</a>
+						<a href="#!" class="lightbox-close" aria-label="Close modal">&times;</a>
+					</div>
+				</div>
+				<div class="lightbox-media">
+					<img src="Preview2Full.webp" alt="Eltruism Healer Profile in full resolution" loading="lazy">
+				</div>
+				<div class="lightbox-nav">
+					<a href="#preview1" class="lightbox-arrow" aria-label="Previous image">&larr; Previous</a>
+					<span class="lightbox-counter">2 / 4</span>
+					<a href="#preview3" class="lightbox-arrow" aria-label="Next image">Next &rarr;</a>
+				</div>
+			</div>
+		</div>
+
+		<div id="preview3" class="lightbox-modal" role="dialog" aria-modal="true"
+			aria-label="Preview 3: Skins and Themes">
+			<a href="#!" class="lightbox-backdrop" aria-label="Close modal"></a>
+			<div class="lightbox-dialog">
+				<div class="lightbox-topbar">
+					<span class="lightbox-title">Skins, Dark &amp; Light Themes — 4K Screenshot</span>
+					<div class="lightbox-controls">
+						<a href="Preview3Full.webp" target="_blank" rel="noopener noreferrer" class="lightbox-external"
+							aria-label="Open original image">Open Full Image ↗</a>
+						<a href="#!" class="lightbox-close" aria-label="Close modal">&times;</a>
+					</div>
+				</div>
+				<div class="lightbox-media">
+					<img src="Preview3Full.webp" alt="Eltruism Skins and Themes in full resolution" loading="lazy">
+				</div>
+				<div class="lightbox-nav">
+					<a href="#preview2" class="lightbox-arrow" aria-label="Previous image">&larr; Previous</a>
+					<span class="lightbox-counter">3 / 4</span>
+					<a href="#preview4" class="lightbox-arrow" aria-label="Next image">Next &rarr;</a>
+				</div>
+			</div>
+		</div>
+
+		<div id="preview4" class="lightbox-modal" role="dialog" aria-modal="true"
+			aria-label="Preview 4: Dynamic Nameplates and Castbars">
+			<a href="#!" class="lightbox-backdrop" aria-label="Close modal"></a>
+			<div class="lightbox-dialog">
+				<div class="lightbox-topbar">
+					<span class="lightbox-title">Nameplates &amp; Castbars — 4K Screenshot</span>
+					<div class="lightbox-controls">
+						<a href="Preview4Full.webp" target="_blank" rel="noopener noreferrer" class="lightbox-external"
+							aria-label="Open original image">Open Full Image ↗</a>
+						<a href="#!" class="lightbox-close" aria-label="Close modal">&times;</a>
+					</div>
+				</div>
+				<div class="lightbox-media">
+					<img src="Preview4Full.webp" alt="Eltruism Nameplates and Castbars in full resolution"
+						loading="lazy">
+				</div>
+				<div class="lightbox-nav">
+					<a href="#preview3" class="lightbox-arrow" aria-label="Previous image">&larr; Previous</a>
+					<span class="lightbox-counter">4 / 4</span>
+					<a href="#preview1" class="lightbox-arrow" aria-label="Next image">Next &rarr;</a>
+				</div>
+			</div>
+		</div>
+
+		<section id="features" class="section-block">
+			<div class="section-header">
+				<h2 class="section-title">What Eltruism Delivers</h2>
+				<p class="section-subtitle">Engineered for competitive raiding, Mythic+, leveling, and visual
+					perfection. Every feature is modular and can be toggled to your exact preference.</p>
+			</div>
+
+			<div class="features-grid">
+				<!-- Feature 1 -->
+				<div class="feature-card">
+					<div class="feature-top">
+						<div class="feature-icon-box">
+							<span class="feature-icon">⚔️</span>
+						</div>
+						<span class="feature-category">Profiles</span>
+					</div>
+					<h3 class="feature-title">Dual Tailored Profiles</h3>
+					<p class="feature-text">Hand-crafted DPS/Tank and dedicated Healer profiles designed specifically
+						for 16:9 displays and verified across 1080p, 1440p, 4K, and Ultrawide monitors. Pixel-perfect
+						unitframes, actionbars, and raid frames with zero overlapping elements.</p>
+				</div>
+
+				<div class="feature-card">
+					<div class="feature-top">
+						<div class="feature-icon-box">
+							<span class="feature-icon">🌈</span>
+						</div>
+						<span class="feature-category">Visuals</span>
+					</div>
+					<h3 class="feature-title">Signature Gradients</h3>
+					<p class="feature-text">Silky smooth color gradients across Unitframes, Blizzard Raid Frames,
+						Nameplates, and Aurabars. All color math is cached in Lua for maximum FPS even during heavy
+						40-player combat encounters.</p>
+				</div>
+
+				<div class="feature-card">
+					<div class="feature-top">
+						<div class="feature-icon-box">
+							<span class="feature-icon">🔊</span>
+						</div>
+						<span class="feature-category">Audio Alerts</span>
+					</div>
+					<h3 class="feature-title">TTS Cooldown Voice Alerts</h3>
+					<p class="feature-text">Configurable Text-To-Speech voice announcements for offensive and defensive
+						cooldowns, interrupt notifications, and low health/mana warnings without cluttering your screen
+						with extra icons.</p>
+				</div>
+
+				<div class="feature-card">
+					<div class="feature-top">
+						<div class="feature-icon-box">
+							<span class="feature-icon">🛡️</span>
+						</div>
+						<span class="feature-category">Nameplates</span>
+					</div>
+					<h3 class="feature-title">Dynamic Threat Nameplates</h3>
+					<p class="feature-text">Intelligent nameplate height scaling, integrated power bar autopositioning,
+						color-coded threat borders, and prominent debuff highlights for effortless mob grouping and
+						crowd control.</p>
+				</div>
+
+				<div class="feature-card">
+					<div class="feature-top">
+						<div class="feature-icon-box">
+							<span class="feature-icon">🎯</span>
+						</div>
+						<span class="feature-category">Cursor HUD</span>
+					</div>
+					<h3 class="feature-title">Cursor Cast &amp; Cooldown Rings</h3>
+					<p class="feature-text">Rotating HUD rings anchored directly to your cursor indicating global
+						cooldown (GCD), spell cast progress, and ability cooldown timers right where your eyes focus.
+					</p>
+				</div>
+
+				<div class="feature-card">
+					<div class="feature-top">
+						<div class="feature-icon-box">
+							<span class="feature-icon">✨</span>
+						</div>
+						<span class="feature-category">Actionbars</span>
+					</div>
+					<h3 class="feature-title">Actionbar Glows &amp; Classic Totems</h3>
+					<p class="feature-text">Tailor spell activation and proc glow animations with custom speeds and
+						sizes. Includes dedicated tracker glows for Shaman totems in Classic Era realms.
+					</p>
+				</div>
+
+				<div class="feature-card">
+					<div class="feature-top">
+						<div class="feature-icon-box">
+							<span class="feature-icon">🎨</span>
+						</div>
+						<span class="feature-category">Themes &amp; Skins</span>
+					</div>
+					<h3 class="feature-title">Sleek Soft Shadows &amp; UI Skins</h3>
+					<p class="feature-text">Manually fine-tuned soft frame shadows, dark &amp; light UI themes,
+						custom class textures, role icons, and comprehensive restyling for character stats, inspect
+						windows, and dialogs.</p>
+				</div>
+
+				<div class="feature-card">
+					<div class="feature-top">
+						<div class="feature-icon-box">
+							<span class="feature-icon">💎</span>
+						</div>
+						<span class="feature-category">Unitframes</span>
+					</div>
+					<h3 class="feature-title">Transparent Unitframe Health</h3>
+					<p class="feature-text">Easily toggle sleek transparent unitframe health backgrounds via the in-game
+						chat command <code>/eltruism transparent</code> for maximum battlefield and environmental
+						visibility.</p>
+				</div>
+
+				<div class="feature-card">
+					<div class="feature-top">
+						<div class="feature-icon-box">
+							<span class="feature-icon">🧭</span>
+						</div>
+						<span class="feature-category">Navigation</span>
+					</div>
+					<h3 class="feature-title">Smart Waypoints &amp; Travel ETA</h3>
+					<p class="feature-text">Enhanced <code>/way</code> command support that calculates real-time travel
+						distance, estimated arrival time (ETA), waypoint naming, and navigation arrow tracking.</p>
+				</div>
+
+				<div class="feature-card">
+					<div class="feature-top">
+						<div class="feature-icon-box">
+							<span class="feature-icon">⚡</span>
+						</div>
+						<span class="feature-category">Quality of Life</span>
+					</div>
+					<h3 class="feature-title">Instant Fast Loot &amp; Wishlist</h3>
+					<p class="feature-text">True instant auto-looting with zero loot window lag, movable LootText
+						alerts, automated vendor junk scrap, and a personal loot wishlist tracker for raid and dungeon
+						drops.</p>
+				</div>
+
+				<div class="feature-card">
+					<div class="feature-top">
+						<div class="feature-icon-box">
+							<span class="feature-icon">💬</span>
+						</div>
+						<span class="feature-category">Chat &amp; Social</span>
+					</div>
+					<h3 class="feature-title">Chat Enhancements &amp; !keys</h3>
+					<p class="feature-text">Inline item icons inside chat links, smooth chat fade when inactive, and the
+						instant <code>!keys</code> shortcut to post your Mythic+ dungeon keystone to group, guild, or
+						raid.</p>
+				</div>
+
+				<div class="feature-card">
+					<div class="feature-top">
+						<div class="feature-icon-box">
+							<span class="feature-icon">🎵</span>
+						</div>
+						<span class="feature-category">Immersion</span>
+					</div>
+					<h3 class="feature-title">Combat &amp; AFK Immersion</h3>
+					<p class="feature-text">Triggers custom music playlists during intense combat encounters, relaxing
+						music during AFK screens with 3D character models, and bespoke mail arrival sounds.</p>
+				</div>
+
+				<div class="feature-card">
+					<div class="feature-top">
+						<div class="feature-icon-box">
+							<span class="feature-icon">⏱️</span>
+						</div>
+						<span class="feature-category">Castbars</span>
+					</div>
+					<h3 class="feature-title">Unified Interrupt Castbars</h3>
+					<p class="feature-text">Unified player, target, and focus castbars with dedicated interrupt
+						protection shields, interrupt success color coding, and cast timer tags.</p>
+				</div>
+
+				<div class="feature-card">
+					<div class="feature-top">
+						<div class="feature-icon-box">
+							<span class="feature-icon">⚙️</span>
+						</div>
+						<span class="feature-category">Modularity</span>
+					</div>
+					<h3 class="feature-title">Multi-Expansion &amp; 100% Modular</h3>
+					<p class="feature-text">Actively maintained for Midnight, MoP, Wrath, Classic Era, and WoW Forever. Every single module can be independently toggled on
+						or off via <code>/eltruism</code>.</p>
+				</div>
+			</div>
+		</section>
+
+		<section id="addons" class="section-block">
+			<div class="section-header">
+				<h2 class="section-title">Built-In Addon Profiles</h2>
+				<p class="section-subtitle">The Eltruism installer automatically includes tailored profiles for your
+					favorite companion addons.</p>
+			</div>
+
+			<div class="addons-grid">
+				<div class="addon-chip">
+					<span class="addon-dot"></span>
+					<span class="addon-name">Details! Damage Meter</span>
+				</div>
+				<div class="addon-chip">
+					<span class="addon-dot"></span>
+					<span class="addon-name">BigWigs &amp; LittleWigs</span>
+				</div>
+				<div class="addon-chip">
+					<span class="addon-dot"></span>
+					<span class="addon-name">Deadly Boss Mods (DBM)</span>
+				</div>
+				<div class="addon-chip">
+					<span class="addon-dot"></span>
+					<span class="addon-name">DynamicCam</span>
+				</div>
+				<div class="addon-chip">
+					<span class="addon-dot"></span>
+					<span class="addon-name">Immersion</span>
+				</div>
+				<div class="addon-chip">
+					<span class="addon-dot"></span>
+					<span class="addon-name">Questie</span>
+				</div>
+				<div class="addon-chip">
+					<span class="addon-dot"></span>
+					<span class="addon-name">Gladdy (Classic)</span>
+				</div>
+				<div class="addon-chip">
+					<span class="addon-dot"></span>
+					<span class="addon-name">Nameplate Scrolling Combat Text</span>
+				</div>
+				<div class="addon-chip">
+					<span class="addon-dot"></span>
+					<span class="addon-name">ElvUI Floating Combat Text</span>
+				</div>
+			</div>
+		</section>
+
+		<!-- Quick Install & Commands Section -->
+		<section id="install" class="section-block">
+			<div class="section-header">
+				<h2 class="section-title">Quick Installation</h2>
+				<p class="section-subtitle">Get up and running in less than two minutes.</p>
+			</div>
+
+			<div class="install-steps">
+				<div class="step-card">
+					<div class="step-num">1</div>
+					<h3 class="step-title">Install ElvUI</h3>
+					<p class="step-desc">Eltruism is an ElvUI plugin. Make sure you have the latest version of ElvUI
+						installed in your World of Warcraft AddOns folder.</p>
+					<a href="https://www.tukui.org/download.php/ui=elvui" target="_blank" rel="noopener noreferrer"
+						class="step-link">Download ElvUI ↗</a>
+				</div>
+
+				<div class="step-card">
+					<div class="step-num">2</div>
+					<h3 class="step-title">Download Eltruism</h3>
+					<p class="step-desc">Grab Eltruism through the CurseForge App, Wago App, or directly via GitHub
+						Releases and extract it to your AddOns directory.</p>
+					<div class="step-links-row">
+						<a href="https://www.curseforge.com/wow/addons/elvui-eltruism" target="_blank"
+							rel="noopener noreferrer" class="step-link">CurseForge ↗</a>
+						<a href="https://addons.wago.io/addons/elvui-eltruism" target="_blank" rel="noopener noreferrer"
+							class="step-link">Wago.io ↗</a>
+					</div>
+				</div>
+
+				<div class="step-card">
+					<div class="step-num">3</div>
+					<h3 class="step-title">Run In-Game Installer</h3>
+					<p class="step-desc">Log into World of Warcraft. The friendly setup guide will launch automatically,
+						or type <code>/eltruism</code> to select your profile and preferences.</p>
+					<span class="step-code">/eltruism</span>
+				</div>
+			</div>
+
+			<!-- Useful In-Game Commands -->
+			<div class="commands-card">
+				<h3 class="commands-title">Handy Chat Commands</h3>
+				<div class="commands-list">
+					<div class="cmd-item">
+						<code>/eltruism</code>
+						<span>Opens the full configuration window and setup installer</span>
+					</div>
+					<div class="cmd-item">
+						<code>/eltruism transparent</code>
+						<span>Quickly toggles unitframe transparent health mode</span>
+					</div>
+					<div class="cmd-item">
+						<code>/way &lt;x&gt; &lt;y&gt; [title]</code>
+						<span>Creates a map waypoint with distance, ETA, and arrow navigation</span>
+					</div>
+					<div class="cmd-item">
+						<code>!keys</code>
+						<span>Posts your current Mythic+ keystone in party, guild, or raid chat</span>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Community & Support CTA Banner -->
+		<section class="community-banner">
+			<div class="community-inner">
+				<div class="community-text">
+					<h2 class="community-heading">Join the Eltruism Community</h2>
+					<p class="community-sub">Have questions, feedback, or want to share your UI screenshots? Join our
+						active Discord server, follow video guides, or support development on Patreon.</p>
+				</div>
+				<div class="community-buttons">
+					<a class="button button-primary" href="https://discord.gg/rBXNxUY6pk" target="_blank"
+						rel="noopener noreferrer">
+						<span>Join Discord</span>
+					</a>
+					<a class="button button-secondary" href="https://github.com/eltreum0/eltruism" target="_blank"
+						rel="noopener noreferrer">
+						<span>GitHub Repository</span>
+					</a>
+					<a class="button button-outline" href="https://www.patreon.com/eltreum" target="_blank"
+						rel="noopener noreferrer">
+						<span>Support on Patreon</span>
+					</a>
+				</div>
+			</div>
+		</section>
+
+		<!-- Footer -->
+		<footer class="site-footer">
+			<hr class="separator" aria-hidden="true">
+			<div class="footer-links">
+				<a href="https://discord.gg/rBXNxUY6pk" target="_blank" rel="noopener noreferrer">Discord</a>
+				<a href="https://github.com/eltreum0/eltruism" target="_blank" rel="noopener noreferrer">GitHub</a>
+				<a href="https://www.curseforge.com/wow/addons/elvui-eltruism" target="_blank"
+					rel="noopener noreferrer">CurseForge</a>
+				<a href="https://addons.wago.io/addons/elvui-eltruism" target="_blank"
+					rel="noopener noreferrer">Wago.io</a>
+				<a href="https://www.patreon.com/eltreum" target="_blank" rel="noopener noreferrer">Patreon</a>
+				<a href="https://www.youtube.com/results?search_query=eltruism" target="_blank"
+					rel="noopener noreferrer">YouTube</a>
+			</div>
+			<p class="footer-copy">
+				&copy; 2026 Eltreum. World of Warcraft is a registered trademark of Blizzard Entertainment.
+			</p>
+		</footer>
+	</main>
+
+	<script>
+		document.addEventListener('keydown', function (e) {
+			if (e.key === 'Escape' && window.location.hash.startsWith('#preview')) {
+				window.history.pushState(null, null, ' ');
+			}
+		});
+	</script>
+</body>
+
 </html>
