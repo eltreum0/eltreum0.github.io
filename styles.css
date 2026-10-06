@@ -5,7 +5,7 @@
 	font-family: 'Roboto';
 	font-style: normal;
 	font-weight: 700;
-	src: url('roboto-v48-latin-700.woff2') format('woff2');
+	src: local('Roboto Bold'), local('Roboto-Bold'), local('Roboto'), url('roboto-v48-latin-700.woff2') format('woff2');
 }
 
 @font-face {
@@ -33,7 +33,7 @@
 	
 	--text-primary: #f0f4f8;
 	--text-secondary: #9da9bc;
-	--text-muted: #6e7a8e;
+	--text-muted: #8593a8;
 
 	--border-subtle: rgba(127, 178, 255, 0.15);
 	--border-active: rgba(127, 178, 255, 0.5);
@@ -403,6 +403,8 @@ body {
 .section-block {
 	margin: 5rem 0;
 	scroll-margin-top: 5rem;
+	content-visibility: auto;
+	contain-intrinsic-size: 1px 500px;
 }
 
 .section-header {
@@ -534,7 +536,7 @@ body {
 	position: fixed;
 	inset: 0;
 	z-index: 999;
-	display: flex;
+	display: none;
 	align-items: center;
 	justify-content: center;
 	opacity: 0;
@@ -543,6 +545,7 @@ body {
 }
 
 .lightbox-modal:target {
+	display: flex;
 	opacity: 1;
 	pointer-events: auto;
 }
@@ -1020,6 +1023,10 @@ body {
 }
 
 @media (max-width: 768px) {
+	.bg-glow {
+		filter: blur(40px);
+	}
+
 	.nav-links {
 		display: none;
 	}
