@@ -294,6 +294,36 @@ body {
 	animation: cyclegradient 5s infinite linear;
 }
 
+.animated-gradient-repooc {
+	--bg-size: 200%;
+	background: linear-gradient(90deg, #00FF98, #A330C9, #00FF98) 0 0 / var(--bg-size) 100%;
+	color: transparent;
+	-webkit-background-clip: text;
+	background-clip: text;
+	animation: cyclegradient 5s infinite linear;
+	font-weight: 700;
+}
+
+.animated-gradient-simpy {
+	--bg-size: 200%;
+	background: linear-gradient(90deg, #45B8DB, #825CCC, #B047F0, #F047A1, #FF8200, #45F56E, #45B8DB) 0 0 / var(--bg-size) 100%;
+	color: transparent;
+	-webkit-background-clip: text;
+	background-clip: text;
+	animation: cyclegradient 6s infinite linear;
+	font-weight: 700;
+}
+
+.animated-gradient-luckyone {
+	--bg-size: 200%;
+	background: linear-gradient(90deg, #FF7D0A, #FFAC00, #FF7D0A) 0 0 / var(--bg-size) 100%;
+	color: transparent;
+	-webkit-background-clip: text;
+	background-clip: text;
+	animation: cyclegradient 5s infinite linear;
+	font-weight: 700;
+}
+
 @keyframes cyclegradient {
 	to {
 		background-position: var(--bg-size) 0;
